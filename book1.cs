@@ -31,7 +31,7 @@ public class book : MonoBehaviour
         //calculate price for amount sold
         totalCost = totalCost * sold;
 
-        //calculate shipping
+        //calculate shipping and profit
         if (sold >= 1)
         {
             shipping = sold - 1;
@@ -39,12 +39,11 @@ public class book : MonoBehaviour
             profit = totalCost - shipping;
         }
 
+        //is 0 are sold, you make 0 profit
         if (sold == 0)
         {
            profit = 0;
         }
-
-        //calculate profit
 
         Debug.Log($"{totalCost} is the cost");
         Debug.Log($"{profit} is the profit");

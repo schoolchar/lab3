@@ -9,28 +9,26 @@ public class money : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        total = 125;
+        //calls function
         paid();
     }
 
     // Update is called once per frame
     void paid()
     {
-        Debug.Log(total);
+        //division wont have a decimal
+        //goes though each number and spits out whats needed
+
+        //goes through $100 dollar bills and sets "hundreds" to total divided by 100 and cuts off the decimal,
+        //same goes for each variable but different number
         int hundred = total / 100;
-        Debug.Log(total);
         total %= 100;
-        Debug.Log(total);
 
         int fiftie = total / 50;
-        Debug.Log(total);
         total %= 50;
-        Debug.Log(total);
 
         int twenty = total / 20;
-        Debug.Log(total);
         total %= 20;
-        Debug.Log(total);
 
         int ten = total / 10;
         total %= 10;
@@ -40,12 +38,13 @@ public class money : MonoBehaviour
 
         int ones = total;
 
-        Debug.Log(total);
-        Debug.Log(hundred);
-        Debug.Log(fiftie);
-        Debug.Log(twenty);
-        Debug.Log(ten);
-        Debug.Log(five);
 
+
+        Debug.Log($"you owe{hundred}$100 bills");
+        Debug.Log($"you owe{fiftie}$50 bills");
+        Debug.Log($"you owe{twenty}$20 bills");
+        Debug.Log($"you owe{ten}$10 bills");
+        Debug.Log($"you owe{five}$5 bills");
+        Debug.Log($"you owe{ones}$1 bills");
     }
 }
